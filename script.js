@@ -1,37 +1,72 @@
 const caixaPrincipal = document.querySelector(".caixa-principal");
 const caixaPerguntas = document.querySelector(".caixa-perguntas");
 const caixaAlternativas = document.querySelector(".caixa-alternativas");
-const textoResultado = document.querySelector(".texto3-resultado");
+const caixaResultado = document.querySelector(".caixa-resultado");
+const textoResultado = document.querySelector(".texto-resultado");
 
 const perguntas =[
     {
-        enuciado:"Assim que saiu da escola ele viu algo",
+        enuciado:"Hoje eu sai de casa",
         alternativas: [
-            "isso é assutador!",
-            "Isso é maravilhoso"
+            {
+        texto: "isso é assutador!",
+        afirmacao: "Isso é maravilhoso",
+            },
+            {
+            texto: "isso é maravilhoso!",
+            afirmacao: "afirmação",
+            }
         ]
     },    
     {
-        enuciado:"Assim que saiu da escola ele viu algo",
+        enuciado:"Vou sair pra jantar fora amanhã",
         alternativas: [
-            "isso é assutador!",
-            "Isso é maravilhoso"
+            {
+        texto: "isso é assutador!",
+        afirmacao: "Isso é maravilhoso",
+            },
+            {
+            texto: "isso é maravilhoso!",
+            afirmacao: "afirmação",
+            }
         ]
     },
     {
 
-        enuciado:"Assim que saiu da escola ele viu algo",
+        enuciado:"Vou sair com meus amigos na proxima semana",
         alternativas: [
-            "isso é assutador!",
-            "Isso é maravilhoso"
+            {
+        texto: "isso é assutador!",
+        afirmacao: "Isso é maravilhoso",
+            },
+            {
+            texto: "isso é maravilhoso!",
+            afirmacao: "afirmação",
+            }
         ]
     },
     {
 
-        enuciado:"Assim que saiu da escola ele viu algo",
+        enuciado:"Meu aniversário é no proximo mês",
         alternativas: [
-            "isso é assutador!",
-            "Isso é maravilhoso"
+            {
+        texto: "isso é assutador!",
+        afirmacao: "Isso é maravilhoso",
+            },
+            {
+            texto: "isso é maravilhoso!",
+            afirmacao: "afirmação",
+            }   
         ]
-    }
-]
+    },
+];
+
+let atual =0;
+let perguntaAtual;
+
+function mostraPergunta () {
+    perguntaAtual = perguntas [atual];
+        caixaPerguntas.textContent = perguntas.enunciado;
+}
+
+mostraPergunta ();
